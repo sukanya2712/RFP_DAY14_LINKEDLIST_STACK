@@ -69,4 +69,28 @@ public class LinkedList<T> {
         }
         return null;
     }
+
+    public boolean insertAfter(T searchData, T insertData) {
+        Node<T> newNode = new Node<>(insertData);
+        Node<T> searchedNode = search(searchData);
+        if (searchedNode != null) {
+            newNode.next = searchedNode.next;
+            searchedNode.next = newNode;
+            return true;
+        }
+        return false;
+    }
+
+    public boolean deleteNode( T deleteData) {
+        Node<T> searchedNode = search(deleteData);
+
+        if(searchedNode!=null){
+            Node<T> temp = head;
+            while(temp.next != searchedNode)
+                temp= temp.next;
+            temp.next= null;
+            return true;
+        }
+        return false;
+    }
 }
