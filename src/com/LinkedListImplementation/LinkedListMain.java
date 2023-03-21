@@ -7,5 +7,11 @@ public class LinkedListMain {
         linkedList1.add(30);
         linkedList1.add(56);
         linkedList1.show();
+
+        LinkedList<Integer> linkedList2 = new LinkedList<>();
+        linkedList2.append(56);
+        linkedList2.append(30);
+        linkedList2.append(70);
+        linkedList2.show();
     }
 }
