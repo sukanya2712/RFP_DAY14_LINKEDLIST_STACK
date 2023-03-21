@@ -35,6 +35,18 @@ public class LinkedListMain {
             System.out.println("The element popped is => " + poppedData2);
 
         linkedList2.show();
+
+        //uc7
+        System.out.println("Adding Element Back to LinkedList");
+        linkedList2.add(70);
+        linkedList2.show();
+        System.out.println("Searching whether element 30 is present in LinkedList or not.");
+        Node<Integer> searchedData = linkedList2.search(30);
+        if (searchedData == null) {
+            System.out.println("Element 30 not found!");
+        } else {
+            System.out.println("Element 30 Found");
+        }
     }
 
 
